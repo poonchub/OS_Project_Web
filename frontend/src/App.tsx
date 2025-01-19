@@ -47,13 +47,11 @@ function App() {
             try {
                 const data = JSON.parse(messageString);
                 if (topic === "sensor/health") {
-                    if (data.heart_rate < 150) {
-                        setRate(Number(data.heart_rate.toFixed(2)));
-                        setOxygen(Number(data.spo2.toFixed(2)));
-                        if (data.heart_rate && data.spo2) {
-                            setHeartRate((prev) => [...prev, data.heart_rate].slice(-10));
-                            setOxygenLevel((prev) => [...prev, data.spo2].slice(-10));
-                        }
+                    setRate(Number(data.heart_rate.toFixed(2)));
+                    setOxygen(Number(data.spo2.toFixed(2)));
+                    if (data.heart_rate && data.spo2) {
+                        setHeartRate((prev) => [...prev, data.heart_rate].slice(-10));
+                        setOxygenLevel((prev) => [...prev, data.spo2].slice(-10));
                     }
                 } else if (topic === "sensor/temperature") {
                     setTemp(Number(data.celsius.toFixed(2)));
