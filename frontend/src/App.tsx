@@ -110,14 +110,14 @@ function App() {
             ageGroup: "ทุกช่วงอายุ",
             normalRange: "95-100%",
             high: "-",
-            low: "น้อยกว่า 94% (Hypoxemia)",
+            low: "น้อยกว่า 94%",
         },
         {
             metric: "อุณหภูมิร่างกาย (Body Temperature)",
             ageGroup: "ทุกช่วงอายุ",
-            normalRange: "36.5-37.5°C",
-            high: "มากกว่า 38°C (ไข้)",
-            low: "น้อยกว่า 35°C (Hypothermia)",
+            normalRange: "35.4-37.4°C",
+            high: "มากกว่า 37.5°C (ไข้)",
+            low: "น้อยกว่า 35.0°C",
         },
     ];
 
